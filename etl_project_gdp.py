@@ -54,3 +54,18 @@ def load_to_db(df, sql_connection, table_name):
     ''' This function saves the final dataframe as a database table
 	with the provided name. Function returns nothing.'''
     df.to_sql(table_name, sql_connection, if_exists='replace', index=False)
+
+def run_query(query_statement, sql_connection):
+    ''' This function runs the stated query on the database table and
+	prints the output on the terminal. Function returns nothing. '''
+    print(query_statement)
+    query_output = pd.read_sql(query_statement, sql_connection)
+    print(query_output)
+
+def log_progress(message):
+    ''' This function logs the mentioned message at a given stage of the code execution to a log file. Function returns nothing'''
+    timestamp_format = '%Y-%h-%d-%H:%M:%S' # Year-Monthname-Day-Hour-Minute-Second 
+    now = datetime.now() # get current timestamp 
+    timestamp = now.strftime(timestamp_format) 
+    with open("./etl_project_log.txt","a") as f: 
+        f.write(timestamp + ' : ' + message + '\n')
