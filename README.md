@@ -92,14 +92,14 @@ The script will:
 
 ## 🔍 Key Functions
 
-| Function | Purpose |
-|----------|---------|
-| `extract()` | Scrapes Wikipedia table and creates initial DataFrame |
-| `transform()` | Cleans data, converts formats, and normalizes units |
-| `load_to_csv()` | Exports DataFrame to CSV file |
-| `load_to_db()` | Stores DataFrame in SQLite table |
-| `run_query()` | Executes SQL queries on the database |
-| `log_progress()` | Records timestamped operation logs |
+| Function         | Purpose                                               |
+| ---------------- | ----------------------------------------------------- |
+| `extract()`      | Scrapes Wikipedia table and creates initial DataFrame |
+| `transform()`    | Cleans data, converts formats, and normalizes units   |
+| `load_to_csv()`  | Exports DataFrame to CSV file                         |
+| `load_to_db()`   | Stores DataFrame in SQLite table                      |
+| `run_query()`    | Executes SQL queries on the database                  |
+| `log_progress()` | Records timestamped operation logs                    |
 
 ## 📝 Logging
 
